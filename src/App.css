@@ -10,7 +10,8 @@ body {
   display: grid;
 }
 
-.button-stop {
+.button-stop,
+.button-delete {
   height: 5vh;
   width: 100px;
   margin-left: 5vh;

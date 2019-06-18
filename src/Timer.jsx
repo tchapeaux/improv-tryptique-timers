@@ -43,7 +43,8 @@ const MS_IN_HOUR = 1000 * 60 * 60;
 
 export class TimerView extends PureComponent {
   static propTypes = {
-    timer: PropTypes.instanceOf(Timer).isRequired
+    timer: PropTypes.instanceOf(Timer).isRequired,
+    onRemove: PropTypes.func.isRequired
   };
 
   constructor() {
@@ -70,7 +71,7 @@ export class TimerView extends PureComponent {
   }
 
   render() {
-    const { timer } = this.props;
+    const { onRemove, timer } = this.props;
 
     const ms = timer.getCurrentTime();
 
@@ -99,6 +100,9 @@ export class TimerView extends PureComponent {
             RESET
           </button>
         ) : null}
+        <button className="button-delete" onClick={onRemove}>
+          DELETE
+        </button>
       </div>
     );
   }
