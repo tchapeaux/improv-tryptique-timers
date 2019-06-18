@@ -19,8 +19,7 @@
 }
 
 .timer-running {
-  background-color: white;
-  color: #282c34;
+  color: yellow;
 }
 
 .timer-time {
