@@ -90,18 +90,13 @@ export class TimerView extends PureComponent {
 
     return (
       <div className={classes}>
-        <span className="timer-time">{`${hh}:${mm}:${ss}`}</span>
-        {
-          <button
-            className="button-toggle"
-            onClick={this.onToggleRunning.bind(null, timer)}
-          >
-            <i className={timer.running ? "fa fa-pause" : "fa fa-play"} />
-          </button>
-        }
+        <span
+          className="timer-time"
+          onClick={this.onToggleRunning.bind(null, timer)}
+        >{`${hh}:${mm}:${ss}`}</span>
         {timer.hasStarted() ? (
           <button className="button-stop" onClick={() => timer.reset()}>
-            <i className="fa fa-stop" />
+            RESET
           </button>
         ) : null}
       </div>

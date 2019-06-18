@@ -24,12 +24,10 @@ class App extends PureComponent {
 
     return (
       <div className="App">
-        <header className="App-header">
-          {timers.map((t, idx) => (
-            <TimerView key={idx} timer={t} />
-          ))}
-          <button onClick={this.onAddTimer}>Add timer</button>
-        </header>
+        {timers.map((t, idx) => (
+          <TimerView key={idx} timer={t} />
+        ))}
+        <button onClick={this.onAddTimer}>Add timer</button>
       </div>
     );
   }
